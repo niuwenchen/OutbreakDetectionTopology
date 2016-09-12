@@ -31,6 +31,6 @@ public class OutbreakDetectionTopology {
         LocalCluster cluster = new LocalCluster();
         cluster.submitTopology("cdc", conf, buildTopology());
         Thread.sleep(10000);
-        cluster.shutdown();
+//        cluster.shutdown();
     }
 }

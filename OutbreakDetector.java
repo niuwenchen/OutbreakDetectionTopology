@@ -8,7 +8,7 @@ import storm.trident.operation.TridentCollector;
 import storm.trident.tuple.TridentTuple;
 
 public class OutbreakDetector extends BaseFunction{
-	public static final int THRESTHOLD=5000;
+	public static final int THRESTHOLD=10000;
 	
 	@Override
 	public void execute(TridentTuple tuple, TridentCollector collector) {
@@ -22,7 +22,7 @@ public class OutbreakDetector extends BaseFunction{
 		{
 			List<Object>  values = new ArrayList<>();
 			values.add("Outbreak detected  for["+ key +"]");
-//			System.out.println("Outbreak detected  for["+ key +"]");
+			System.out.println("********************** Outbreak detected  for["+ key +"]");
 			collector.emit(values);
 		}
 			
